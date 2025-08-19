@@ -31,7 +31,7 @@ body
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
-    z-index: 1;
+    z-index: 2;
 }
 .header .toggler{
     color: var(--main-color);
@@ -209,6 +209,7 @@ body
     align-items: center ;
     justify-content: center;
     flex-direction: column;
+    z-index: 1;
 }
 #nav.active{
     clip-path: circle(100% );
@@ -223,6 +224,7 @@ body
     border-left-color:#ce1126 ;
     z-index: -1;
     pointer-events: none;
+    
 }
 #nav li{
     margin: 20px 0;
@@ -363,3 +365,4 @@ body
         font-size: 5em;
     }
 }
+
