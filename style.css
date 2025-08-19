@@ -148,7 +148,7 @@ body
     cursor: pointer;
     border-radius: 50%;
 }
-.social .icon a
+.social .icon i
 {
     color: #283233;
 }
@@ -400,3 +400,4 @@ body
         font-size: 5em;
     }
 }
+
