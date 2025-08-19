@@ -148,6 +148,11 @@ body
     cursor: pointer;
     border-radius: 50%;
 }
+.social .icon a
+{
+    color: #283233;
+}
+
 /*** Slider ****/
 .slider
 {
@@ -174,6 +179,7 @@ body
     justify-content: center;
     position: relative;
 }
+
 .leftQuote
 {
     position: absolute;
@@ -327,7 +333,7 @@ body
 }
 #nav li:nth-of-type(5)::after
 {
-    background-image: url(./images/gaza.jpg) ;
+    background-image: url(./images/uvqk5ynx.png) ;
 }
 @media (max-width : 768px)
 {
