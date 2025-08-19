@@ -20,8 +20,9 @@ body
     font-family: 'El Messiri', sans-serif;
     direction: rtl;
 }
-/* start header */
-.header{
+/*** Start Header ***/
+.header
+{
     position: fixed;
     top: 0;
     left: 0;
@@ -33,110 +34,123 @@ body
     padding: 0 30px;
     z-index: 2;
 }
-.header .toggler{
+.header .toggler
+{
     color: var(--main-color);
     font-size: 30px;
     cursor: pointer;
 }
-.header .searchBox{
+.header .searchBox
+{
     position: relative;
     width: 230px;
     border-radius: 20px;
-    border: 2px solid var(--main-color);
-    overflow: hidden;
+    border : 2px solid var(--main-color);
+    transition: .7s opacity ease-in-out;
 }
-.header .searchBox input{
+.header .searchBox.hidden
+{
+    opacity: 0;
+}
+.header .searchBox input
+{
     padding: 7px 20px;
     outline: none;
-    border: none;
+    border : none ;
     width: 100%;
     background: #ffffff80;
     font-size: 19px;
+    border-radius: inherit;
 }
-.header .searchBox .search-icon{
+.header .searchBox .search-icon
+{
     position: absolute;
-    top:50%;
     left: 10px;
+    top: 50%;
     transform: translateY(-50%);
 }
-/* end header */
-/* start landing */
-.landing{
+/**** End Header ****/
+/*** Start landing ***/
+.landing
+{
     min-height: 100vh;
     display: flex;
     position: relative;
     background-color: #fff;
     padding-top: 100px;
 }
-
-.bg{
+.bg
+{
     position: absolute;
     width: 50%;
     left: 0;
     top: 0;
     height: 100%;
-    background: url('./images/half.png') center center/ 100% 100%;
+    background: url(./images/half.png) center center/100% 100% ;
 }
-
-.right{
+.right
+{
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding-right: 100px;
+
 }
-.right h3{
+.right h3
+{
     font-size: 3em;
     width: 100%;
     text-align: start;
-    color: #232323;
+    color: #283233;
+
 }
-.right h3 span{
+.right h3 span
+{
     color: var(--main-color);
 }
-
-.right .logo{
+.right .logo
+{
     width: 100%;
     height: 300px;
-    background: url('./images/logo.png') center center/80% 80% no-repeat;
+    background: url(./images/logo.png) center center/ 80% 80% no-repeat;
     margin: 30px 0;
 }
-.right button{
-
+.right button
+{
+    outline: none;
+    border : none;
+    background: var(--main-color);
+    width: 180px;
     padding: 5px 25px;
     border-radius: 20px;
-    background: var(--main-color);
     color: #fff;
-    border: none;
-    outline: none;
     font-size: 1.2em;
-    width: 180px;
     font-family: 'El Messiri', sans-serif;
-    cursor: text;
+    cursor: pointer;
 }
-
-
-.social{
+.social
+{
     position: absolute;
-    bottom: 50px;
     right: 30px;
+    bottom: 50px;
 }
-.social .icon{
+.social .icon
+{
     margin: 10px 0;
-    border: 2px solid #283233;
+    border : 2px solid #283233;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
 }
-.social .icon a i{
-    color: #232323;
-}
-/* slider */
-.slider{
+/*** Slider ****/
+.slider
+{
     position: absolute;
     bottom: 70px;
     text-align: center;
@@ -146,13 +160,13 @@ body
     font-size: 1.4em;
     overflow: hidden;
 }
-
-.slider .slider-wrapper{
+.slider .slider-wrapper
+{
     display: flex;
     transition: .7s margin ease;
 }
-.slider .text{
-    width: 100%;
+.slider .text
+{
     flex-shrink: 0;
     padding: 25px;
     display: flex;
@@ -160,20 +174,22 @@ body
     justify-content: center;
     position: relative;
 }
-.leftQuote{
+.leftQuote
+{
     position: absolute;
+    left: 5px ;
     top: 5px;
-    left: 5px;
     opacity: .7;
 }
-.rightQuote{
+.rightQuote
+{
     position: absolute;
+    right: 5px ;
     bottom: 5px;
-    right: 5px;
     opacity: .7;
 }
-
-.controls{
+.controls
+{
     position: absolute;
     bottom: 20px;
     width: 300px;
@@ -181,67 +197,72 @@ body
     display: flex;
     justify-content: center;
 }
-
-.controls .prev,.controls .next{
+.controls > div
+{
     width: 35px;
     height: 35px;
     background-color: var(--main-color);
     color: #fff;
     margin: 0 10px;
-    border: 1px solid #283233;
     border-radius: 50%;
     display: grid;
     place-items: center;
     cursor: pointer;
 }
-/* end landing */
-/* start nav */
-#nav{
+/**** Nav ****/
+#nav
+{
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(to bottom,#000 33.33%,#fff 33.33%,#fff 66.66%,#007A3d 66.66%,#007A3d 100%);
+    background: linear-gradient(to bottom , #000 33.33% , #fff 33.33% ,#fff 66.66%, #007A3d 66.66% , #007A3d 100%)
+    ;
     clip-path: circle(0% at 100% 0);
     transition: 1s clip-path ease-in-out;
     display: flex;
-    align-items: center ;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     z-index: 1;
+
 }
-#nav.active{
-    clip-path: circle(100% );
+#nav.active 
+{
+    clip-path: circle( 100%);
 }
-#nav::after{
+#nav::after
+{
     content: "";
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
     border: 50vh solid transparent;
-    border-left-color:#ce1126 ;
-    z-index: -1;
+    border-left-color: #ce1126;
     pointer-events: none;
-    
+    z-index: -1;
 }
-#nav li{
+#nav li
+{
     margin: 20px 0;
-    list-style: none;   
+    list-style: none;
 }
-#nav li a{
-   text-decoration: none;
-   font-size: 3rem;
-   cursor: pointer;
-   display: inline-block;
-   position: relative;
-   color: #fff;
-   text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
-   transition: 1s all ease-in-out;
-   z-index: 3;
+#nav li a
+{
+    font-size: 3em;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    text-shadow: 0 0 4px rgba(0, 0,0,.6);
+    transition: 1s all ease-in-out;
+    z-index: 3;
 }
-#nav li::before{
+#nav li::before
+{
     content: attr(data-text);
     position: absolute;
     top: 50%;
@@ -256,14 +277,17 @@ body
     opacity: 0;
     z-index: 2;
 }
-#nav li:hover::before{
+#nav li:hover::before
+{
     opacity: .5;
     letter-spacing: 0;
 }
-#nav li a:hover{
-    transform: scale(1.5);
+#nav li a:hover
+{
+    transform: scale(1.7);
 }
-#nav li::after{
+#nav li::after
+{
     content: "";
     position: absolute;
     top: 0%;
@@ -271,35 +295,40 @@ body
     transform: translate(-50%,-50%);
     width: 70vw;
     height: 70vh;
-    z-index: 1;
     pointer-events: none;
+    z-index: 1;
     transition: .7s all ease-in-out;
     opacity: 0;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 4px 2px rgba(0, 0,0,.6);
 }
-#nav li:hover::after{
+#nav li:hover::after
+{
     top: 50%;
-    opacity: .5;
+    opacity: .3;
 }
-#nav li:first-of-type::after{
-    background-image: url('./images/qods.jpg');
+#nav li:first-of-type:after
+{
+    background-image: url(./images/qods.jpg) ;
 }
-#nav li:nth-of-type(2)::after{
-    background-image: url('./images/hefa.jpg');
+#nav li:nth-of-type(2)::after
+{
+    background-image: url(./images/hefa.jpg) ;
 }
-#nav li:nth-of-type(3)::after{
-    background-image: url('./images/yafa.jpg');
+#nav li:nth-of-type(3)::after
+{
+    background-image: url(./images/yafa.jpg) ;
 }
-#nav li:nth-of-type(4)::after{
-    background-image: url('./images/khalil.jpg');
+#nav li:nth-of-type(4)::after
+{
+    background-image: url(./images/khalil.jpg) ;
 }
-#nav li:nth-of-type(5)::after{
-    background-image: url('./images/uvqk5ynx.png');
+#nav li:nth-of-type(5)::after
+{
+    background-image: url(./images/gaza.jpg) ;
 }
-/* end nav */
 @media (max-width : 768px)
 {
     body
@@ -365,4 +394,3 @@ body
         font-size: 5em;
     }
 }
-
